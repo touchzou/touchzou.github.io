@@ -84,9 +84,9 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p><a href="http://walle-web.io/" target="_blank" rel="noopener">walle</a> 自动部署的原理非常简单. walle要有从代码库中拉代码的权限,要能通过ssh命令访问目标机器的<br>权限.对于自动部署原理,一言以蔽之,先从代码库中把代码拉到安装walle的机器上,然后执行自定义的构建脚本,最后再构建后的文件推送到<br>目标机器上.<br>第一二三步</p>
-<h1 id="配制方法"><a href="#配制方法" class="headerlink" title="配制方法"></a>配制方法</h1><img src="/2018/08/21/Walle%20真实环境使用步骤/a.png">
-<p>点击修改：<br><img src="/2018/08/21/Walle%20真实环境使用步骤/b.png"><br><img src="/2018/08/21/Walle%20真实环境使用步骤/example.png" title="This is an example image"></p>
+        <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p><a href="http://walle-web.io/" target="_blank" rel="noopener">walle</a> 自动部署的原理非常简单. walle要有从代码库中拉代码的权限,要能通过ssh命令访问目标机器的<br>权限.对于自动部署原理,一言以蔽之,先从代码库中把代码拉到安装walle的机器上,然后执行自定义的构建脚本,最后再构建后的文件推送到<br>目标机器上.</p>
+<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><h1 id="配制方法"><a href="#配制方法" class="headerlink" title="配制方法"></a>配制方法</h1><img src="/2018/08/21/Walle%20真实环境使用步骤/a.png">
+<p>点击修改：<br><img src="/2018/08/21/Walle%20真实环境使用步骤/b.png"></p>
 <h2 id="配制项目"><a href="#配制项目" class="headerlink" title="配制项目"></a>配制项目</h2><ul>
 <li>项目名称. 根据实际情况填写。</li>
 <li>项目环境. 分测试环境,预发布环境,线上环境.</li>
@@ -124,10 +124,10 @@
 </li>
 </ul>
 <p>日志一律在<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/data/logs/fcheck_manual</span><br></pre></td></tr></table></figure></p>
-<img src="/2018/08/21/Walle%20真实环境使用步骤/c.png">
+<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><img src="/2018/08/21/Walle%20真实环境使用步骤/c.png">
 <img src="/2018/08/21/Walle%20真实环境使用步骤/d.png">
 <img src="/2018/08/21/Walle%20真实环境使用步骤/e.png">
-<p>再点上线，再点部署<br><img src="/2018/08/21/Walle%20真实环境使用步骤/f.png"><br><img src="/2018/08/21/Walle%20真实环境使用步骤/g.png"><br><img src="/2018/08/21/Walle%20真实环境使用步骤/h.png"><br>如果环境配置正确，进度条会全部显示绿色，否则，有错误，从第一步回去，重新修改项目配置<br>第四步：<br><a href="http://10.13.84.141/wallelog/walle-20180821.log" target="_blank" rel="noopener">http://10.13.84.141/wallelog/walle-20180821.log</a><br>在浏览器中查看日志，日志名称根据日期变化，在chrome中按F12 格式化查看日志<br><img src="/2018/08/21/Walle%20真实环境使用步骤/i.png"><br>日志信息与自己期望一样，则正确。<br>我的运行脚本：<br><br>否则，到发布版本库（这里就是/data/walle/releases/fcheck_api）中去找时间最近一个版本的项目输出、项目错误日志，查找原因；或到项目相关依赖工具的输出日志，查找原因。</p>
+<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>再点上线，再点部署<br><img src="/2018/08/21/Walle%20真实环境使用步骤/f.png"><br><img src="/2018/08/21/Walle%20真实环境使用步骤/g.png"><br><img src="/2018/08/21/Walle%20真实环境使用步骤/h.png"><br>如果环境配置正确，进度条会全部显示绿色，否则，有错误，从第一步回去，重新修改项目配置<br>第四步：<br><a href="http://10.13.84.141/wallelog/walle-20180821.log" target="_blank" rel="noopener">http://10.13.84.141/wallelog/walle-20180821.log</a><br>在浏览器中查看日志，日志名称根据日期变化，在chrome中按F12 格式化查看日志<br><img src="/2018/08/21/Walle%20真实环境使用步骤/i.png"><br>日志信息与自己期望一样，则正确。<br>我的运行脚本：<br><br>否则，到发布版本库（这里就是/data/walle/releases/fcheck_api）中去找时间最近一个版本的项目输出、项目错误日志，查找原因；或到项目相关依赖工具的输出日志，查找原因。</p>
 
       
     </div>
